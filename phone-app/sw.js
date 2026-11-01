@@ -1,5 +1,5 @@
 // Offline support: the app screen opens without internet; data comes live from Google when online.
-const CACHE = 'cc-v1';
+const CACHE = 'cc-v2';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-180.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', e => {
